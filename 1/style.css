@@ -1,0 +1,84 @@
+main {
+    position: relative;
+    background-color: #0d5825;
+    height: 500px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.semantic {
+    text-align: center;
+    padding-top: 30px;
+}
+
+q {
+    color: white;
+    font-size: 25px;
+}
+
+em {
+    color: white;
+    font-size: 25px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    margin: auto;
+}
+
+.card_pos {
+    position: relative;
+    width: 150px;
+    margin: 0 auto;
+    transform: translate(0%, 50%);
+    top: 100px;
+}
+
+.card_pos img {
+    position: absolute;
+    width: 100%;
+    animation: animto .2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+img:nth-child(1) {
+    transform: rotate(11deg);
+    z-index: 3;
+    left: 50px;
+}
+
+img:nth-child(2) {
+    transform: rotate(-10deg) translate(0, -20px);
+    z-index: 2;
+}
+
+img:nth-child(3) {
+    transform: rotate(-25deg) translate( 0, -20px);
+    z-index: 1;
+    right: 40px;
+}
+
+@keyframes anim {
+    from {
+        top: 0px;
+    }
+    to {
+        top: -20px;
+    }
+}
+
+@keyframes animto {
+    from {
+        top: -20px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+img:hover {
+    animation: anim .2s ease-out;
+    animation-fill-mode: forwards;
+}

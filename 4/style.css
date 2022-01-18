@@ -1,0 +1,46 @@
+main {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(140deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 102, 1) 52%, rgba(0, 212, 255, 1) 100%);
+    padding: 50px;
+}
+
+.block {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: bgcolor 5s infinite ease-in-out;
+    margin: 0 auto;
+}
+
+@keyframes bgcolor {
+    0% {
+        top: 10%;
+        left: 10%;
+        background-color: red;
+    }
+    25% {
+        top: calc(90% - 100px);
+        left: 10%;
+        background-color: blue;
+    }
+    50% {
+        top: calc(90% - 100px);
+        left: calc(90% - 100px);
+        background-color: green;
+    }
+    75% {
+        top: 10%;
+        left: calc(90% - 100px);
+        background-color: yellow;
+    }
+    100% {
+        top: 10%;
+        left: 10%;
+        background-color: red;
+    }
+}

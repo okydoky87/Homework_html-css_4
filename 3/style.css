@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.aside {
+    position: absolute;
+    background-color: grey;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: -23%;
+    padding: 20px 50px;
+    color: white;
+    transition: .2s ease;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.aside:hover {
+    left: 0%;
+}
+
+.aside:hover .menu {
+    animation: opacity .2s ease;
+    animation-fill-mode: forwards;
+}
+
+ul {
+    margin-left: 10%;
+}
+
+ul li {
+    padding: 5px 0;
+    transition: .2s ease;
+}
+
+ul li:hover {
+    color: orange;
+}
+
+.menu {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: rotate(90deg);
+    opacity: 1;
+}
